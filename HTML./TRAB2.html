@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Recursos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      width: 48%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button[type="submit"] {
+      background: #007bff;
+      color: white;
+    }
+
+    button[type="reset"] {
+      background: #f44336;
+      color: white;
+    }
+
+    .inline {
+      display: flex;
+      gap: 10px;
+    }
+
+    .inline label {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" method="post">
+    <h1>Agendamento</h1>
+
+    <label for="evento">Evento</label>
+    <input type="text" id="evento" name="evento" placeholder="Informe o nome do evento" maxlength="100" required>
+
+    <label for="funcionario">Funcionário</label>
+    <input type="text" id="funcionario" name="funcionario" placeholder="Informe o nome do funcionário" maxlength="50" required>
+
+    <label for="departamento">Departamento</label>
+    <select id="departamento" name="departamento" required>
+      <option value="" disabled selected>Selecione</option>
+      <option value="ti">TI</option>
+      <option value="rh">RH</option>
+      <option value="financeiro">Financeiro</option>
+      <option value="marketing">Marketing</option>
+    </select>
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" placeholder="Informe o e-mail" required>
+
+    <div class="inline">
+      <div>
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+      <div>
+        <label for="hora">Hora</label>
+        <input type="time" id="hora" name="hora" required>
+      </div>
+    </div>
+
+    <label for="local">Local</label>
+    <input type="text" id="local" name="local" placeholder="Informe o local" maxlength="100" required>
+
+    <label>Equipamentos Necessários</label>
+    <div>
+      <input type="checkbox" id="datashow" name="equipamento" value="datashow">
+      <label for="datashow">Projetor Multimídia</label>
+    </div>
+    <div>
+      <input type="checkbox" id="notebook" name="equipamento" value="notebook">
+      <label for="notebook">Notebook</label>
+    </div>
+    <div>
+      <input type="checkbox" id="caixa-som" name="equipamento" value="caixa-som">
+      <label for="caixa-som">Caixa de Som</label>
+    </div>
+    <div>
+      <input type="checkbox" id="microfone-fio" name="equipamento" value="microfone-fio">
+      <label for="microfone-fio">Microfone com fio</label>
+    </div>
+    <div>
+      <input type="checkbox" id="microfone-sem-fio" name="equipamento" value="microfone-sem-fio">
+      <label for="microfone-sem-fio">Microfone sem fio</label>
+    </div>
+    <div>
+      <input type="checkbox" id="internet" name="equipamento" value="internet">
+      <label for="internet">Internet</label>
+    </div>
+
+    <label for="observacoes">Observações</label>
+    <textarea id="observacoes" name="observacoes" rows="4" placeholder="Informações adicionais"></textarea>
+
+    <label for="data-reserva">Data da Reserva</label>
+    <input type="date" id="data-reserva" name="data-reserva" required>
+
+    <div class="inline">
+      <button type="submit">Enviar</button>
+      <button type="reset">Redefinir</button>
+    </div>
+  </form>
+</body>
+</html>
